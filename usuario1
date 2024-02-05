@@ -1,0 +1,21 @@
+# team_member_alice.py
+
+from customer_manager import CustomerManager
+
+class TeamMemberAlice:
+    def __init__(self, manager):
+        self.manager = manager
+
+    def simulate_actions(self):
+        print("Usuario 1 (Alice) realizando acciones:")
+        print(self.manager.create_customer("Alice Customer", "Nuevo Servicio"))
+        print(self.manager.query_customer("Alice Customer"))
+        print(self.manager.update_customer("Alice Customer", "Servicio Actualizado"))
+        print(self.manager.query_customer("Alice Customer"))
+        print(self.manager.delete_customer("Alice Customer"))
+        print(self.manager.query_customer("Alice Customer"))
+
+if __name__ == "__main__":
+    manager_alice = CustomerManager()
+    alice = TeamMemberAlice(manager_alice)
+    alice.simulate_actions()
