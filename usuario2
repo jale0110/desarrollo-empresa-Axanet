@@ -1,0 +1,21 @@
+# team_member_bob.py
+
+from customer_manager import CustomerManager
+
+class TeamMemberBob:
+    def __init__(self, manager):
+        self.manager = manager
+
+    def simulate_actions(self):
+        print("Usuario 2 (Bob) realizando acciones:")
+        print(self.manager.create_customer("Bob Customer", "Nuevo Servicio"))
+        print(self.manager.query_customer("Bob Customer"))
+        print(self.manager.update_customer("Bob Customer", "Servicio Actualizado"))
+        print(self.manager.query_customer("Bob Customer"))
+        print(self.manager.delete_customer("Bob Customer"))
+        print(self.manager.query_customer("Bob Customer"))
+
+if __name__ == "__main__":
+    manager_bob = CustomerManager()
+    bob = TeamMemberBob(manager_bob)
+    bob.simulate_actions()
